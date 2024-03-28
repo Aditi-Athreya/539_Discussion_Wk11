@@ -34,7 +34,7 @@
 		// 3. Change the background color and margin for the entire page.
 		document.body.style.backgroundColor = "lightblue";
 		document.body.style.margin = "0 auto";
-	
+
 
 	}
 
@@ -42,8 +42,22 @@
     //    Each occurence should be on a separate line.  Don't use paragraphs. 
 	function copyFunction(){
 		document.getElementById("cheer").innerHTML += "Go Blue" + "<br>";
+		{
+
+		let copyCount = 0;
+
+		function copyFunction(){
+			copyCount++;
+			if (copyCount % 2 === 1) {
+				document.getElementById("cheer").innerHTML += "<span style='color: blue;'>Go Blue</span><br>";
+			} else {
+				document.getElementById("cheer").innerHTML += "<span style='color: yellow;'>Go Blue</span><br>";
+			}
+		}
 
 	}
+}
+
 
 	
 </script>
